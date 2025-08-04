@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 100px 50px;
+}
+
+h1 {
+  color: red;
+  background: bisque;
+}
+
+p {
+  color: green;
+  padding: 25px 0;
+  border: 2px solid black;
+}
+
+ol {
+  color: blue;
+  padding: 25px 0;
+  border: 1px solid grey;
+}
