@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #22-CSS Sizing Units - px, rem, em, vh, vw, % & more</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: auto;
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 20px; */
+            background-color: aliceblue;
+        }
+
+        .box2 {
+            margin: 50px;
+            font-family: "Poppins", sans-serif;
+            text-wrap-style: pretty;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Tutorial #22-CSS Sizing Units - px, rem, em, vh, vw, % & more</h1>
+    </div>
+    <div class="box2">
+        <pre>
+            <p class="head-p">**CSS sizing units** include both absolute and relative options, each with specific behaviors for layout and responsiveness:</p>
+
+- **px (pixel):** An **absolute unit**, fixed to the device's pixels. Styles using px do not scale with device or parent settings; for example, `font-size: 16px` always renders at 16 device pixels.[2][5]
+
+- **rem (root em):** A **relative unit** based on the font size of the root (typically ``) element.
+For instance, if the root's font size is the browser default 16px, then `1rem = 16px`; adjusting the root font size changes all rem-based units throughout the document.[3][7][8][2]
+
+- **em:** Also a **relative unit**, but its value depends on the font size of the current element or its parent.
+For example, if a parent has `font-size: 14px`, then `2em = 28px` for its child. em can cascade, stacking multipliers if nested.[4][8][2]
+
+- **% (percent):** Relative to the parent element’s dimension; for example, `width: 50%` will be half the parent's width.[5][2][4]
+
+- **vh (viewport height):** Relative to the viewport's height: `1vh` is 1% of the viewport's height.[2][4]
+
+- **vw (viewport width):** Relative to the viewport's width: `1vw` is 1% of the viewport's width.[4][2]
+
+### Key Characteristics
+
+- **px:** Best for precise element sizes or graphics; not recommended for text in responsive or accessible layouts.[5]
+- **rem:** Consistent scaling across the site—useful for global typography and responsive design.[7][3][2]
+- **em:** Flexible for modular components where the size depends on the local context, but can lead to unexpected scaling if nested.[8][2][4]
+- **%:** Useful for fluid layouts that adapt to parent sizes.[2][4][5]
+- **vh/vw:** Ideal for designing layouts that fill the browser window, adapting to any device and orientation.[4][2]
+
+### Summary Table
+
+| Unit   | Absolute/Relative  | Reference Base                 | Use Case                           |
+|--------|--------------------|-------------------------------|------------------------------------|
+| px     | Absolute           | Device pixel                  | Icons, borders, fixed elements     |
+| rem    | Relative           | Root element font size (`html`)| Global text, scalable UI           |
+| em     | Relative           | Current/parent element         | Component-modular sizing           |
+| %      | Relative           | Parent element                 | Fluid/container layouts            |
+| vh     | Relative           | Viewport height                | Full-screen sections, hero areas   |
+| vw     | Relative           | Viewport width                 | Responsive horizontal layouts      |
+
+Relative units like **rem, em, %, vh, vw** are better for responsive and accessible designs, as they scale with context and adapt to changing user or device settings.
+Absolute units like **px** always remain the same size, regardless of the context.[7][5][2][4]
+
+For robust web design, prefer **rem** for base font sizing, **em** for scalable child components, **%** for layout, and **vw/vh** for viewport-based sizing.[3][8][5][2]
+
+[1] https://austingil.com/px-or-rem-in-css/
+[2] https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/
+[3] https://www.freecodecamp.org/news/css-units-when-to-use-each-one/
+[4] https://www.geeksforgeeks.org/css/css-units-em-rem-px-vh-vw/
+[5] https://dev.to/magsimuhammadessa/understanding-css-size-units-px-em-rem-and-more-48k4
+[6] https://www.w3schools.com/cssref/css_units.php
+[7] https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units
+[8] https://codedamn.com/news/frontend/difference-between-em-rem-px-and-percentage-units-in-css
+        </pre>
+    </div>
+
+    <div class="box2">
+        <pre>
+            **CSS `vmin` and `vmax` are viewport-relative length units**:
+
+- **`vmin` (viewport minimum):** Represents **1% of the smaller dimension** of the viewport, meaning it takes the lesser of the viewport's width or height.  
+  For example, if the viewport is 1000px wide and 800px tall, then `1vmin` equals 1% of 800px (i.e., 8px).
+
+- **`vmax` (viewport maximum):** Represents **1% of the larger dimension** of the viewport, meaning it takes the greater of the viewport's width or height.  
+  For the same viewport (1000px wide, 800px tall), `1vmax` equals 1% of 1000px (i.e., 10px).
+
+These units are useful when you want to size an element relative to the viewport size but dynamically based on the smaller or larger screen dimension, which helps in creating more fluid and responsive designs.
+
+**Summary Table**
+
+| Unit  | Relative To                     | Use Case Example                                      |
+|-------|--------------------------------|------------------------------------------------------|
+| `vmin` | Smaller of viewport width or height | Ensuring element size fits comfortably on narrow or short viewports |
+| `vmax` | Larger of viewport width or height  | Setting minimum height or width based on the larger screen dimension |
+
+These units help adapt layout sizing when viewport proportions vary, such as between portrait and landscape orientations on devices.
+
+This behavior allows for responsive and flexible designs, especially for elements that must adapt to both width- and height-constrained viewports.[1][2][4][8]
+
+[1] https://www.educative.io/answers/what-are-css-viewport-units
+[2] https://www.sitepoint.com/css-viewport-units-quick-start/
+[3] https://www.youtube.com/watch?v=waiZqfefo14
+[4] https://www.geeksforgeeks.org/css/new-css-viewport-units-vi-vb-vmax-vmin/
+[5] https://blog.webdevsimplified.com/2022-08/css-viewport-units/
+[6] https://www.w3schools.com/cssref/css_units.php
+[7] https://dev.to/matthias/units-in-css-em-rem-pt-px-vw-vh-vmin-vmax-ex-ch-53l0
+[8] https://developer.mozilla.org/en-US/docs/Web/CSS/length
+[9] https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units
+[10] https://github.com/react-native-community/discussions-and-proposals/issues/576
+        </pre>
+    </div>
+</body>
+</html>

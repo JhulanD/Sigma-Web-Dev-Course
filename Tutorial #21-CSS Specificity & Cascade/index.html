@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #21-CSS Specificity & Cascade</title>
+    <style>
+        /* The Specificity of this selector is 1 */
+        h1 {
+            color: darkcyan;
+            text-align: center;
+            font-size: 32px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+        }
+
+        /* The Specificity of this selector is 10 */
+        .cyellow {
+            color: yellowgreen;
+        }
+
+        /* The Specificity of this selector is 100 */
+
+        .cred {
+            color: red !important;
+        }
+
+        /* The Specificity of this selector is 10 */
+        .cgreen {
+            color: green;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 16px;
+            font-family: monospace;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="cyellow cred cgreen">
+        Tutorial #21-CSS Specificity & Cascade
+    </h1>
+
+    <h3 class="center">Here is the standard ranking of **CSS selector specificity**, from lowest to highest:
+    </h3>
+    <pre>
+1. **Universal selector** (`*`)
+2. **Element (type) selectors** (e.g., `h1`, `p`) and **pseudo-elements** (`::before`, `::after`)
+3. **Class selectors** (e.g., `.classname`), **attribute selectors** (e.g., `[type="text"]`), and **pseudo-classes** (e.g., `:hover`)
+4. **ID selectors** (e.g., `#id`)
+5. **Inline styles** (e.g., `style="..."` inside an element attribute; highest specificity)
+
+**Note:**  
+- Class, attribute, and pseudo-class selectors all have **equal specificity** and are ranked above element selectors but below ID selectors.
+- If multiple selectors have the same specificity, the one defined last in the CSS applies.
+- The `!important` rule can override specificity, but only within the same origin/cascade layer.[1][2][3][4][5]
+
+**Specificity points (for calculation):**
+- Inline style: 1000
+- ID selector: 100
+- Class/attribute/pseudo-class: 10
+- Element/pseudo-element: 1
+- Universal: 0
+
+So, in order:  
+**Inline style > ID > Class/attribute/pseudo-class > Element/pseudo-element > Universal**.[2][3][4][5][1]
+
+[1] https://www.geeksforgeeks.org/css/css-specificity/
+[2] https://salehmubashar.com/blog/specificity-in-css-selectors
+[3] https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity
+[4] https://www.codewithharry.com/tutorial/css-specificity
+[5] https://web.dev/learn/css/specificity
+[6] https://polypane.app/css-specificity-calculator/
+[7] https://www.getfishtank.com/insights/css-specificity-hierarchy
+[8] https://stackoverflow.com/questions/25105736/what-is-the-order-of-precedence-for-css
+[9] https://www.geekster.in/articles/css-specificity/
+    </pre>
+</body>
+
+</html>
