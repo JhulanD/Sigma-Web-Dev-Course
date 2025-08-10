@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #24-CSS Shadows and Outlines</title>
+    <style>
+        .box {
+            border: 2px solid darkslategray;
+            padding: 20px;
+            /* Simple shadow to the bottom right */
+            box-shadow: 10px 10px  yellowgreen;
+        }
+        .t-shadow {text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        i m a box
+        <p class="t-shadow">
+            text shadow
+        </p>
+    </div>
+
+    <div>
+        <pre>
+            The CSS **box-shadow** property adds shadow effects around an element's frame.
+            It is highly versatile and can create multiple shadows separated by commas for layered effects.
+
+### Key Syntax:
+```css
+box-shadow: h-offset v-offset blur-radius spread-radius color inset?;
+```
+
+### Property Components:
+- **h-offset (horizontal offset):** Moves the shadow left (negative) or right (positive).
+- **v-offset (vertical offset):** Moves the shadow up (negative) or down (positive).
+- **blur-radius (optional):** Controls the blur amount; higher values make the shadow softer.
+- **spread-radius (optional):** Expands (positive) or contracts (negative) the shadow size.
+- **color:** Defines shadow color (supports named colors, hex, rgba, hsla).
+- **inset (optional):** Changes shadow from outer to inner (inside the element).
+
+### Examples:
+```css
+/* Simple shadow to the bottom right */
+box-shadow: 10px 10px;
+
+/* Shadow with blur and color */
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+
+/* Shadow with blur, spread and color */
+box-shadow: 10px 10px 5px 3px #888;
+
+/* Inner shadow */
+box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.7);
+
+/* Multiple shadows */
+box-shadow: 5px 5px red, 10px 10px blue, 15px 15px green;
+```
+
+### Usage Notes:
+- Shadows enhance depth and visual layering.
+- Semi-transparent colors (e.g., `rgba`) yield realistic shadow effects.
+- Multiple shadows can create complex layering.
+- The `inset` keyword makes shadows appear inside the element, useful for pressed or recessed looks.
+
+This property is very well covered in many tutorials and is essential for creating modern UI effects in CSS.[1][2][3][4][6]
+
+If you want, I can also help summarize how the related `outline` property works, or provide example code from the Sigma Web Development Course tutorial you referenced. Just let me know!
+
+[1] https://www.youtube.com/@CodeWithHarry
+[2] https://www.geeksforgeeks.org/css/css-box-shadow-property/
+[3] https://www.tutorialspoint.com/css/css_box-shadow.htm
+[4] https://www.w3schools.com/css/css3_shadows_box.asp
+[5] https://css-tricks.com/almanac/properties/b/box-shadow/
+[6] https://www.w3schools.com/cssref/css3_pr_box-shadow.php
+[7] https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+[8] https://www.joshwcomeau.com/css/designing-shadows/
+[9] https://www.youtube.com/watch?v=-JNRQ5HjNeI
+[10] https://www.codewithharry.com/tutorial/css-shadows
+[11] https://www.programiz.com/css/box-shadow
+        </pre>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <pre>
+            The **CSS outline** property draws a line around an element, outside its border, without affecting the element's size or layout. It is often used to highlight or emphasize an element, such as focusing form inputs or buttons.
+
+### Key Points about CSS Outline:
+
+- **Shorthand property:** The `outline` shorthand sets three sub-properties in one declaration:
+  - `outline-width` (thickness)
+  - `outline-style` (line style, required)
+  - `outline-color` (color)
+
+- **Outline styles include:**  
+  `none`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, `outset`
+
+- **Does not affect layout:** Unlike borders, outlines do not take up space or affect the element's box model.
+
+- **Outline color:** By default, if not specified, browsers often use the element's text color or invert color for accessibility.
+
+- **No border-radius support:** Outlines cannot be rounded with `border-radius`.
+
+### Syntax examples:
+
+```css
+/* Outline with all three properties */
+element {
+  outline: 3px solid blue;
+}
+
+/* A dashed red outline */
+element {
+  outline: dashed red;
+}
+
+/* Thick ridge pink outline */
+element {
+  outline: thick ridge pink;
+}
+
+/* No outline */
+element {
+  outline: none;
+}
+```
+
+### Summary Table for Outline Styles:
+
+| Style   | Description                                  |
+|---------|----------------------------------------------|
+| none    | No outline                                   |
+| dotted  | Dotted line                                 |
+| dashed  | Dashed line                                 |
+| solid   | Single solid line                           |
+| double  | Two solid lines                             |
+| groove  | 3D grooved look                             |
+| ridge   | 3D ridged look (opposite of groove)         |
+| inset   | Looks embedded into the page                 |
+| outset  | Appears raised out of the page                |
+
+### Differences from Border:
+
+- Outline is drawn *outside* the border edge.
+- Does not affect element dimensions or layout.
+- Can overlap other content.
+- Useful for accessibility emphasis (e.g., focus outlines).
+
+These features make outlines especially useful for visual feedback and accessibility without disturbing layout.
+
+If you want, I can also provide example code demonstrating outline usage. 
+
+References: MDN, W3Schools, GeeksforGeeks.[1][3][4][5][7]
+
+[1] https://www.w3schools.com/cssref/pr_outline-style.php
+[2] https://www.programiz.com/css/outline
+[3] https://developer.mozilla.org/en-US/docs/Web/CSS/outline-style
+[4] https://developer.mozilla.org/en-US/docs/Web/CSS/outline
+[5] https://www.w3schools.com/cssref/pr_outline.php
+[6] https://mimo.org/glossary/css/outline
+[7] https://www.w3schools.com/css/css_outline_shorthand.asp
+[8] https://www.w3schools.com/css/css_outline.asp
+[9] https://www.geeksforgeeks.org/css/css-outline/
+[10] https://www.geekster.in/articles/css-outline/
+        </pre>
+    </div>
+
+    <br>
+    <hr>
+    <div>
+        <pre>
+            The **CSS outline** property draws a line around an element, outside its border, without affecting the element's size or layout. It is often used to highlight or emphasize an element, such as focusing form inputs or buttons.
+
+### Key Points about CSS Outline:
+
+- **Shorthand property:** The `outline` shorthand sets three sub-properties in one declaration:
+  - `outline-width` (thickness)
+  - `outline-style` (line style, required)
+  - `outline-color` (color)
+
+- **Outline styles include:**  
+  `none`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, `outset`
+
+- **Does not affect layout:** Unlike borders, outlines do not take up space or affect the element's box model.
+
+- **Outline color:** By default, if not specified, browsers often use the element's text color or invert color for accessibility.
+
+- **No border-radius support:** Outlines cannot be rounded with `border-radius`.
+
+### Syntax examples:
+
+```css
+/* Outline with all three properties */
+element {
+  outline: 3px solid blue;
+}
+
+/* A dashed red outline */
+element {
+  outline: dashed red;
+}
+
+/* Thick ridge pink outline */
+element {
+  outline: thick ridge pink;
+}
+
+/* No outline */
+element {
+  outline: none;
+}
+```
+
+### Summary Table for Outline Styles:
+
+| Style   | Description                                  |
+|---------|----------------------------------------------|
+| none    | No outline                                   |
+| dotted  | Dotted line                                 |
+| dashed  | Dashed line                                 |
+| solid   | Single solid line                           |
+| double  | Two solid lines                             |
+| groove  | 3D grooved look                             |
+| ridge   | 3D ridged look (opposite of groove)         |
+| inset   | Looks embedded into the page                 |
+| outset  | Appears raised out of the page                |
+
+### Differences from Border:
+
+- Outline is drawn *outside* the border edge.
+- Does not affect element dimensions or layout.
+- Can overlap other content.
+- Useful for accessibility emphasis (e.g., focus outlines).
+
+These features make outlines especially useful for visual feedback and accessibility without disturbing layout.
+
+If you want, I can also provide example code demonstrating outline usage. 
+
+References: MDN, W3Schools, GeeksforGeeks.[1][3][4][5][7]
+
+[1] https://www.w3schools.com/cssref/pr_outline-style.php
+[2] https://www.programiz.com/css/outline
+[3] https://developer.mozilla.org/en-US/docs/Web/CSS/outline-style
+[4] https://developer.mozilla.org/en-US/docs/Web/CSS/outline
+[5] https://www.w3schools.com/cssref/pr_outline.php
+[6] https://mimo.org/glossary/css/outline
+[7] https://www.w3schools.com/css/css_outline_shorthand.asp
+[8] https://www.w3schools.com/css/css_outline.asp
+[9] https://www.geeksforgeeks.org/css/css-outline/
+[10] https://www.geekster.in/articles/css-outline/
+        </pre>
+    </div>
+</body>
+
+</html>

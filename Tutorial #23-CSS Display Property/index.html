@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #23-CSS Display Property</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 0;
+        }
+        .box {
+            border: 2px solid gray;
+            display: inline-block;
+            padding: 20px;
+        }
+
+        /* .box1 {
+            /* display: none; */
+            /* visibility: hidden; */
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        I m a box
+    </div>
+    <div class="box box1">
+        I m also a box
+
+    </div>
+
+    <div>
+        <pre>
+            The **CSS display property** determines how an HTML element is displayed on a web page, affecting its box type and layout behavior. It controls whether elements are inline, block, grid, flex, or other types, and how their children are rendered.
+
+**Common and important display values include:**
+
+- **block:** Element generates a block box; it starts on a new line and takes the full width available (e.g., ``, ``).
+- **inline:** Element generates an inline box; it sits within text and doesn't force a line break (e.g., ``, ``). Width and height settings do not apply.
+- **inline-block:** Inline-level box but behaves like a block container; width and height can be set.
+- **none:** The element is completely removed from the rendering flow; not visible and takes no space.
+- **flex:** Displays as a block-level flex container; enables flexible box layout of children.
+- **inline-flex:** Inline-level flex container.
+- **grid:** Block-level grid container; for CSS Grid layout.
+- **inline-grid:** Inline-level grid container.
+- **contents:** The element itself is not rendered; only its children appear as if moved up in the DOM.
+- **list-item:** Behaves like a `` element, with markers for lists.
+- Table-related display values let elements behave like table elements (`table`, `table-row`, `table-cell`, etc.).
+
+**Summary Table:**
+
+| Display Value  | Description                                  |
+|----------------|----------------------------------------------|
+| block          | Block-level box; starts on a new line       |
+| inline         | Inline box; flows within text                |
+| inline-block   | Inline box but allows width/height control  |
+| none           | Element removed from the layout and not visible |
+| flex           | Block-level flex container                   |
+| inline-flex    | Inline-level flex container                   |
+| grid           | Block-level grid container                    |
+| inline-grid    | Inline-level grid container                    |
+| contents       | Element disappears, only children are rendered |
+| list-item      | Behaves as a list item (``)              |
+
+This property is foundational for layout control and works closely with other CSS properties like positioning, margins, and flex/grid settings to create responsive and structured web pages.[1][2][3][4][5]
+
+If you want, I can provide example code snippets demonstrating these display values.
+
+[1] https://www.w3schools.com/css/css_display_visibility.asp
+[2] https://www.geeksforgeeks.org/css/css-display-property/
+[3] https://www.w3schools.com/cssref/pr_class_display.php
+[4] https://mimo.org/glossary/css/display-property
+[5] https://developer.mozilla.org/en-US/docs/Web/CSS/display
+[6] https://www.programiz.com/css/display
+[7] https://dev.to/sulyman1020/display-property-in-css-with-practical-examples-1ahl
+[8] https://www.lambdatest.com/blog/css-display-property/
+[9] https://www.greatfrontend.com/questions/quiz/what-is-the-css-display-property-and-can-you-give-a-few-examples-of-its-use
+[10] https://www.youtube.com/watch?v=9T8uxp5hQ60
+        </pre>
+    </div>
+</body>
+</html>
