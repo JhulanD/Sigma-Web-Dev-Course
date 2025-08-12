@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #28-CSS Position Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            height: 1000px;
+        }
+/* An Imp Exception - transform, filter or perspective properetoes can also make an element appear as positioned */
+        .box {
+            height: 225px;
+            width: 75vw;
+            border: 2px solid #151515;
+            margin: 4px;
+            padding: 4px;
+        }
+
+        .box1 {
+            background-color: antiquewhite;
+            position: sticky;
+            top: 10px;
+            height: 120px;
+
+        }
+
+        .box2 {
+            background-color: azure;
+            position: relative;
+            top: 25px;
+            left: 25px;
+            z-index: 1;
+        }
+
+        .box3 {
+            background-color: greenyellow;
+            position: relative;
+            z-index: 2;
+            left: 50px;
+         
+        }
+
+        .box4 {
+            background-color: aquamarine;
+            position: fixed;
+            left: 50px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>
