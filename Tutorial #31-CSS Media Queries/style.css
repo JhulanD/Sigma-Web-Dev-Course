@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: beige;
+}
+
+@media only screen and (max-width: 640px){
+    body {
+        background-color: aquamarine;
+    }
+    
+}

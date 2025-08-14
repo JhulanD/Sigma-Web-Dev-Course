@@ -1,0 +1,35 @@
+:root {
+    --pcolor: #dddddd;
+    --scolor: #b3f1fd;
+    --main-font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav {
+    font-family: var(--main-font-family);
+    background-color: var(--pcolor);
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.container {
+    background-color: var(--scolor);
+    font-family: var(--main-font-family);
+    font-size: 1rem;
+}
