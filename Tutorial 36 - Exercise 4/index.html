@@ -8,13 +8,22 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Geist:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+        :root {
+            --pcolor: #222222;
+            --scolor: antiquewhite;
+            --tertierycolor: rgb(155, 155, 139);
+            --textcolor: #141414
+            --main-font-family: "Poppins", sans-serif;
+            --h1-font-family: "Geist", sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
         }
 
         nav {
-            background-color: antiquewhite;
+            background-color: var(--scolor);
             padding: 10px;
         }
 
@@ -23,9 +32,23 @@
         }
 
         ul li {
+            color: var(--textcolor);
             list-style: none;
             display: inline-block;
             padding: 10px;
+        }
+
+        .header {
+            background-color: var(--tertierycolor);
+        }
+
+        h1 {
+            font-family: var(--h1-font-family);
+            color: var(--textcolor);
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -39,5 +62,11 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div class="header">
+            <h1>Multicolor Website</h1>
+        </div>
+    </main>
 </body>
 </html>
