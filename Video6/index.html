@@ -8,36 +8,40 @@
 <body>
     <h1>Apply here for a job</h1>
     <div>
-    <label for="name">Enter your username</label>
-    <input type="text" autofocus name="name" placeholder="Enter your username">
+        <label for="name">Enter your username</label>
+        <input type="text" autofocus name="name" placeholder="Enter your username">
     </div>
     <div>
-    <label for="password">Enter your password</label>
-    <input type="password" name="password" placeholder="Enter your password">
+        <label for="password">Enter your password</label>
+        <input type="password" name="password" placeholder="Enter your password">
     </div>
     <div>
-    <label for="gender">Enter your gender</label>
-    <input type="radio" name="gender" placeholder="Enter your gender">Male
-    <input type="radio" name="gender" placeholder="Enter your gender">Female
+    <label>Enter your gender</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+</div>
+
+    <div>
+    <label for="newsletter">Subscribe to our newsletter</label>
+    <input type="checkbox" name="newsletter" id="newsletter">
+</div>
+<div>
+    <label for="resume">Upload your resume</label>
+    <input type="file" name="resume" id="resume">
+</div>
+    <div>
+        <label for="comment">Enter your comment</label>
+        <textarea id="comment" name="comment" rows="10" cols="50"></textarea>
     </div>
     <div>
-        <label for="newsletter">Subscribe to our newsletter</label>
-        <input type="checkbox" name="newsletter">
-    </div>
-    <div>
-        <label for="resume">Upload your resume</label><input type="file"></label>
-    </div>
-    <div>
-        <label for="comment" name="comment">Enter your comment</label>
-        <textarea id="comment" name="comment" rows="10" cols="50">
-        </textarea>
-    </div>
-    <div>
-        <select name="country" id="country">
-            <option value="india">India</option>
-            <option value="usa">USA</option>
-            <option value="canada">Canada</option>
-        </select>
+        <label for="country">Select your country:</label>
+        <select id="country" name="country">
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+</select>
     </div>
 </body>
 </html>
