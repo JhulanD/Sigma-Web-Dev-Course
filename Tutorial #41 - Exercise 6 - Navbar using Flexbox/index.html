@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial #41 - Exercise 6 - Navbar using Flexbox</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&family=Questrial&family=Quicksand:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+        html,
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+
+        .navbar {
+            width: 75vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            /* NEW: center the whole navbar */
+            margin: 0 auto;
+
+        }
+
+        .menu {
+            display: flex;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .menu-items {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .buy-now {
+            border: 2px solid slategray;
+            padding: 5px 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
+</head>
+
+<body>
+    <!-- Design this website's Navbar in CSS Flexbox -->
+    <!-- https://www.ultraedit.com -->
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="brand">
+                    <img src="/Frame-1-2.png" alt="">
+                </div>
+                <div class="menu">
+                    <p class="menu-items">
+                        Products<span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span></i>
+                    </p>
+                    <p class="menu-items">
+                        Pricing<span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </p>
+                    <p class="menu-items">
+                        Resources<span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </p>
+                    <p class="menu-items">
+                        Our Company<span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </p>
+                </div>
+                <div class="contact">
+                    <p class="buy-now">Buy Now</p>
+                    <p>
+                        <i class="fa-solid fa-globe"></i>English
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
