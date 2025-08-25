@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Transforms MasterClass Demo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&family=Outfit:wght@100..900&family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body {
+      font-family: Inter, sans-serif;
+      background: #f2f4f9;
+      min-height: 100vh;
+      padding: 0;
+      color: #274060;
+    }
+    .container {
+      max-width: 900px;
+      margin: 36px auto;
+      padding: 0 16px;
+    }
+    h1 {
+      text-align: center;
+      padding-bottom: 30px;
+      font-size: 2.1em;
+      letter-spacing: 1.1px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .transform-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 120px;
+      font-size: 1.08em;
+      font-weight: 600;
+      color: #2d3a45;
+      transition: all 0.5s cubic-bezier(.53,-0.02,.5,1.64);
+      cursor: pointer;
+      text-align: center;
+      border: 2px solid #dee3e9;
+      padding: 14px 10px;
+      word-break: break-word;
+    }
+    .explanation {
+      background: #e1e8f0;
+      color: #22303c;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 12px;
+      font-size: 1rem;
+      line-height: 1.4;
+      min-height: 130px;
+      transition: background 0.3s ease;
+      white-space: pre-wrap;
+    }
+    .css-code {
+      background: #d1d9e6;
+      border-radius: 5px;
+      padding: 6px 10px;
+      margin-top: 8px;
+      font-family: Consolas, monospace;
+      font-size: 0.9em;
+      color: #12233f;
+      display: inline-block;
+    }
+    /* Transform effects on hover */
+    .transform-box[data-transform="rotate"]:hover {
+      transform: rotate(20deg);
+    }
+    .transform-box[data-transform="scale"]:hover {
+      transform: scale(1.2);
+    }
+    .transform-box[data-transform="skew"]:hover {
+      transform: skewY(20deg);
+    }
+    .transform-box[data-transform="translate"]:hover {
+      transform: translateY(-30px);
+    }
+    .transform-box[data-transform="perspective"]:hover {
+      transform: perspective(200px) rotateY(30deg);
+    }
+    .transform-box[data-transform="matrix"]:hover {
+      transform: matrix(1.1, 0.2, 0.2, 1.1, 0, 0);
+    }
+    .transform-box[data-transform="flip"]:hover {
+      transform: scaleX(-1);
+    }
+    .transform-box[data-transform="origin"]:hover {
+      transform-origin: bottom left;
+      transform: rotate(30deg);
+    }
+    .transform-box[data-transform="combo"]:hover {
+      transform: scale(1.2) rotate(-15deg) skewX(25deg);
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 450px) {
+      .container {
+        padding: 0 4px;
+      }
+      h1 {
+        font-size: 1.28em;
+        padding-bottom: 18px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CSS Transforms MasterClass Demo</h1>
+    <div class="grid">
+      <div>
+        <div class="transform-box" data-transform="rotate">rotate(20deg)</div>
+        <div class="explanation">
+          <strong>rotate(angle):</strong> Rotates the element clockwise or counterclockwise by the specified angle. Positive angles rotate clockwise.
+          <div class="css-code">transform: rotate(20deg);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="scale">scale(1.2)</div>
+        <div class="explanation">
+          <strong>scale(factor):</strong> Enlarges or shrinks the element by the scale factor. A value over 1 makes it bigger, less than 1 smaller.
+          <div class="css-code">transform: scale(1.2);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="skew">skewY(20deg)</div>
+        <div class="explanation">
+          <strong>skew(axis):</strong> Tilts the element along the X or Y axis, creating a slanted effect like shearing.
+          <div class="css-code">transform: skewY(20deg);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="translate">translateY(-30px)</div>
+        <div class="explanation">
+          <strong>translate(x, y):</strong> Moves the element from its current position horizontally (x) or vertically (y).
+          <div class="css-code">transform: translateY(-30px);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="perspective">perspective + rotateY(30deg)</div>
+        <div class="explanation">
+          <strong>perspective(value):</strong> Gives a 3D depth effect, making rotations in 3D space look realistic.
+          <div class="css-code">transform: perspective(200px) rotateY(30deg);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="matrix">matrix(1.1, 0.2, 0.2, 1.1, 0, 0)</div>
+        <div class="explanation">
+          <strong>matrix(a,b,c,d,e,f):</strong> Combines multiple 2D transforms (scale, skew, rotate, translate) into one function using six values.
+          <div class="css-code">transform: matrix(1.1, 0.2, 0.2, 1.1, 0, 0);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="flip">scaleX(-1)</div>
+        <div class="explanation">
+          <strong>scaleX(-1):</strong> Flips the element horizontally, creating a mirror image along the vertical axis.
+          <div class="css-code">transform: scaleX(-1);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="origin">transform-origin: bottom left + rotate(30deg)</div>
+        <div class="explanation">
+          <strong>transform-origin:</strong> Changes the point around which transformations like rotate happen. Default is center; here it’s bottom-left for a unique effect.
+          <div class="css-code">transform-origin: bottom left;<br>transform: rotate(30deg);</div>
+        </div>
+      </div>
+      <div>
+        <div class="transform-box" data-transform="combo">scale + rotate + skew</div>
+        <div class="explanation">
+          <strong>combo transforms:</strong> Combine scale, rotate, and skew for complex visual effects by stacking transform functions together.
+          <div class="css-code">transform: scale(1.2) rotate(-15deg) skewX(25deg);</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
