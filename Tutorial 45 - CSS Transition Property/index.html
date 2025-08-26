@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial #45 - CSS Transition Property</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 50vh;
+            background-color: lightsalmon;
+            
+        }
+        .box {
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+            transition-property: all 3s ease-in-out 2s;;
+        }
+        .translate {
+            transform: translateX(500px) rotate(45deg);
+            background-color: violet;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>CSS Transition Property</h1>
+    <div class="container">
+        <div class="box translate">Box 1</div>
+        <!-- <div class="box">Box 2</div>
+        <div class="box">Box 3</div> -->
+    </div>
 </body>
 </html>
