@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smooth Bounce Animation</title>
+<style>
+/* Container to hold the bouncing box */
+.container {
+    height: 60vh;                /* vertical space for bounce */
+    width: 80vw;
+    background-color: bisque;    /* light background for contrast */
+    display: flex;
+    justify-content: center;     /* center box horizontally */
+    align-items: flex-end;       /* stick box to the bottom */
+    overflow: hidden;            /* hides any overflow during bounce */
+}
+
+/* The bouncing box */
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 12px;         /* rounded corners look nicer */
+
+    /* Apply bounce animation */
+    animation: bounce 2.5s infinite;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    /* Start at ground, normal shape */
+    0%   { transform: translateY(0) scaleY(1); }
+
+    /* First (highest) jump */
+    15%  { transform: translateY(-180px) scaleY(1.05); }  /* stretch a bit going up */
+
+    /* Hit the ground → squash */
+    30%  { transform: translateY(0) scaleY(0.9); }        /* squashed look */
+
+    /* Second jump (smaller) */
+    45%  { transform: translateY(-120px) scaleY(1.04); }
+
+    /* Hit ground again → squash */
+    60%  { transform: translateY(0) scaleY(0.92); }
+
+    /* Third jump (even smaller) */
+    75%  { transform: translateY(-60px) scaleY(1.02); }
+
+    /* Almost settled → tiny squash */
+    90%  { transform: translateY(0) scaleY(0.96); }
+
+    /* Fully settled back to normal shape */
+    100% { transform: translateY(0) scaleY(1); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- The box text is optional, just for demo -->
+    <div class="box">Bounce</div>
+</div>
+</body>
+</html>
