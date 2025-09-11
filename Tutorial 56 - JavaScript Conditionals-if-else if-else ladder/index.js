@@ -10,4 +10,15 @@ if (age >= 18) {
     console.log("You are not eligible to vote");
 }
 
-// More examples
+// Operator
+
+let marks = 50;
+if (marks >= 80) {
+    console.log("You got A grade");
+} else if (marks >= 60) {
+    console.log("You got B grade");
+} else if (marks >= 40) {
+    console.log("You got C grade");
+} else {
+    console.log("You got F grade");
+}
