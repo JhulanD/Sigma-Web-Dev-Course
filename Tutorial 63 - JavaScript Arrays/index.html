@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <title>Simple Number Match</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    input, button {
+      margin: 10px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Number Match Game</h2>
+  <p>Enter two indexes (0–9):</p>
+  <label for="index1">Index1</label>
+  <input id="index1" type="number" min="0" max="9" />
+  <label for="index2">Index2</label>
+  <input id="index2" type="number" min="0" max="9" />
+  <button onclick="checkMatch()">Check</button>
+  <p id="result"></p>
+
+  <script src="index.js">
+   
+  </script>
+</body>
+</html>
